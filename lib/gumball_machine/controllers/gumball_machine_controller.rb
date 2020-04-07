@@ -9,7 +9,7 @@ class GumballMachineController
 
   def run 
     while true
-      system("clear")
+      system("printf '\33c\e[3J'")
       option_selected = @view.options_for_machine # 1, 2 or 3
       if option_selected == 1
         @view.gumballs_count(@gumball_machine)
